@@ -1,10 +1,10 @@
 body {
-    background:orangered;
+    background:rgb(231, 141, 56);
 }
 
 td {
     border: 1px solid black;
-    width: 70px;
+    width: 200px;
     height: 30px;
 }
 
@@ -16,8 +16,83 @@ img:hover {
     border: 5px solid black;
 }
 
-div {
-    width: 100%;
+.red {
+    width: 0%;
     height: 100%;
     background: red;
 }
+
+.toLeft {
+    position: relative;
+}
+.toLeft:hover div {
+    width: 100%;
+    animation: widthEnlarge 3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@keyframes widthEnlarge {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+#field-email {
+    background: rgb(47, 166, 212);
+    color: white;
+    padding: 10px;
+    border: 4px double rebeccapurple;
+    border-radius: 10px;
+}
+
+#field-email:focus {
+    outline: none;
+    background: rgb(221, 137, 137);
+
+}
+
+#field-email::placeholder {
+    color: red;
+}
+
+.spaces div {
+    background: rgb(85, 198, 218);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    padding: 10px;
+}
+
+.svg-images {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.video {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(video.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .home {
+      width: 40px;
+  }
+
+  .fb-icon {
+      width: 40px;
+  }
+
+  .f-letter:hover {
+      fill: red;
+      transform: rotate(5deg);
+  }
